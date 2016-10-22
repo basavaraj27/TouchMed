@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--makes sure only one item can be selectable at once-->
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Check BMI"
+            android:id="@+id/bmi_menu_id"
+            android:checked="false"
+            android:icon="@drawable/add"/>
+
+                <item
+                    android:id="@+id/addDependent_menu_id"
+                    android:checked="false"
+                    android:icon="@drawable/add"
+                    android:title="Add Dependents"/>
+
+    </group>
+</menu>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.basu.touchmed.SplashActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/touchmedlogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:src="@drawable/touchtempmedlogo"/>
+
+    <TextView
+        android:id="@+id/logotext"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/touchmedlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Touch Care"
+        android:textStyle="bold"
+        android:textSize="45sp"/>
+
+    <ProgressBar
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logotext"
+        android:indeterminate="true"
+        android:layout_marginTop="20dp"
+        style="@android:style/Widget.Holo.Light.ProgressBar"
+        />
+
+    <TextView
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powered by TouchCodes India"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

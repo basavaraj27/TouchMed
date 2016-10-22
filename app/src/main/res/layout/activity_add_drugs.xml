@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_add_drugs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.basu.touchmed.AddDrugs">
+
+    <include
+        android:id="@+id/adddrugs_toolbar"
+        layout="@layout/toolbar_layout"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="4dp"
+                >
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Adddrug_Name_Input"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondaryText"
+                android:textColor="@color/primaryText">
+
+                <EditText
+                    android:padding="5dp"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:drawableLeft="@drawable/medical_drug_pill"
+                    android:id="@+id/Adddrug_name_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Drug Name"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"/>
+            </android.support.design.widget.TextInputLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="4dp">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Adddrug_stock_Input"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondaryText"
+                android:textColor="@color/primaryText">
+
+                <EditText
+                    android:padding="5dp"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:drawableLeft="@drawable/quantity"
+                    android:id="@+id/Adddrug_stock_EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Stock"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"/>
+            </android.support.design.widget.TextInputLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="4dp"
+                >
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:padding="5dp"
+                    android:textColor="@color/secondaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_drug_date_pick_label"
+                    android:text="Expiry Date : "
+                    android:drawableLeft="@drawable/clock1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:textSize="14sp"
+                   />
+
+                <TextView
+                    android:padding="5dp"
+                    android:textColor="@color/primaryText"
+                    android:textColorHint="@color/primaryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_drug_date_pick"
+                    android:textSize="18sp"
+                    android:hint="Select Date"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                   />
+
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <Button
+                android:padding="5dp"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Drug"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:id="@+id/Adddrug_submit_button"
+                android:layout_marginTop="20dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_medicine_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.basu.touchmed.AddMedicineFormActivity">
+
+    <include
+        android:id="@+id/addmedicine_form_toolbar"
+        layout="@layout/toolbar_layout"
+        />
+
+        <ScrollView android:fitsSystemWindows="true"
+        android:id="@+id/add_med_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_below="@+id/addmedicine_form_toolbar">
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:padding="5dp"
+                android:id="@+id/addmed_Name_Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondaryText"
+                android:textColor="@color/primaryText">
+
+                <EditText
+                    android:padding="5dp"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:drawableLeft="@drawable/user_name"
+                    android:id="@+id/addmed_name_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Drug Name"
+                    android:textSize="@dimen/med_form_textview"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:textColor="@color/secondaryText"
+                    android:padding="5dp"
+                    android:drawableLeft="@drawable/calendar_1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date : "
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:textColor="@color/primaryText"
+                    android:padding="5dp"
+                    android:id="@+id/startdatepick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Start Date "
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:textColor="@color/secondaryText"
+                    android:padding="5dp"
+                    android:drawableLeft="@drawable/calendar_1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End Date : "
+                    android:textSize="14sp"
+                    android:id="@+id/textView" />
+
+                <TextView
+                    android:textColor="@color/primaryText"
+                    android:padding="5dp"
+                    android:id="@+id/enddatepick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select End Date"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:textColor="@color/secondaryText"
+                    android:padding="5dp"
+                    android:drawableLeft="@drawable/clock1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time : "
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:textColor="@color/primaryText"
+                    android:padding="5dp"
+                    android:id="@+id/addmedform_timepick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Time"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp">
+
+                <RadioGroup
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioGroup"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:padding="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Before Food"
+                        android:id="@+id/beforefood_radioButton"
+                        android:layout_gravity="center_horizontal"
+                        android:checked="false"
+                        android:textSize="@dimen/med_form_textview"
+                        android:textColor="@color/primaryText"
+                        />
+
+                    <RadioButton
+                        android:padding="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="After Food"
+                        android:id="@+id/afterfood_radioButton"
+                        android:layout_gravity="center_horizontal"
+                        android:checked="false"
+                        android:textSize="@dimen/med_form_textview"
+                        android:textColor="@color/primaryText"/>
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/addmedform_remark"
+                android:background="@drawable/rectborder"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="10dp"
+                android:hint="Remarks"
+                android:textSize="@dimen/hint_textsize"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="3"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scrollbars="vertical"/>
+
+
+            <Button
+                android:padding="5dp"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Medicine"
+                android:background="@drawable/rounded_button"
+                android:layout_gravity="center"
+                android:id="@+id/addmedicineform_addmedbtn"
+                android:layout_marginTop="20dp"
+                />
+
+            <Button
+                android:padding="5dp"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:background="@drawable/rounded_button"
+                android:layout_gravity="center"
+                android:id="@+id/addmedicineform_submit_btn"
+                android:layout_marginTop="20dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+    </RelativeLayout>

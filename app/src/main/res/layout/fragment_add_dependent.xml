@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.basu.touchmed.fragments.AddDependent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/dependent_Name_Inputll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondaryText"
+                android:textColor="@color/primaryText">
+
+                <EditText
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:drawableLeft="@drawable/user_name"
+                    android:id="@+id/dependent_name_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Name"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/dependent_phoneno_Inputll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondaryText"
+                android:textColor="@color/primaryText">
+
+                <EditText
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:drawableLeft="@drawable/mobileicon"
+                    android:id="@+id/dependent_phoneno_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:hint="Mobile Number"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/dependent_Age_Inputll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondaryText"
+                android:textColor="@color/primaryText">
+
+                <EditText
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:drawableLeft="@drawable/user_name"
+                    android:id="@+id/dependent_age_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:hint="Age"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/dependent_id_Inputll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondaryText"
+                android:textColor="@color/primaryText">
+
+                <EditText
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:drawableLeft="@drawable/user_name"
+                    android:id="@+id/dependent_id_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="ID"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/dependent_pickcolor_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Colour"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#818181"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"/>
+
+            <com.thebluealliance.spectrum.SpectrumPalette
+                android:layout_marginTop="10dp"
+                android:id="@+id/palette"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:spectrum_columnCount="4"
+                android:layout_centerHorizontal="true"
+                app:spectrum_autoPadding="true"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <Button
+                android:textColor="#fff"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Add Dependent"
+                android:background="@drawable/rounded_button"
+                android:layout_gravity="center"
+                android:id="@+id/dependent_add_button"
+                android:layout_marginTop="20dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
