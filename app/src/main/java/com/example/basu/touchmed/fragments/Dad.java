@@ -28,9 +28,6 @@ import com.github.clans.fab.FloatingActionMenu;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class Dad extends Fragment {
 
     private RecyclerView recyclerView;
@@ -82,7 +79,6 @@ public class Dad extends Fragment {
                 startActivity(new Intent(getContext(), AddDrugs.class));
             }
         });
-
 
         recyclerView.addOnItemTouchListener(new DepndItemClick(getContext(), recyclerView, new DepndItemClick.ClickListener() {
             @Override
